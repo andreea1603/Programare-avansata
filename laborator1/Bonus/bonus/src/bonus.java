@@ -56,7 +56,7 @@ public class bonus {
 
         int nr_noduri, radacina, nr_muchii, n1, n2;
 
-        nr_noduri=(int)(Math.random()*1_000_000 % 10000) + 1;
+        nr_noduri=(int)(Math.random()*1_000_000 % 1000) + 1;
         nr_muchii=nr_noduri-1;
         vizitat= new int[nr_noduri+1];
         matrix=new int[nr_noduri+1][nr_noduri+1];
