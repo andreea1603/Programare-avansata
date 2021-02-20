@@ -1,6 +1,5 @@
 
-Pentru partea optionala, am verificat daca parametrul primit este valid(reprezinta un singur numar care este intreg, impar), 
-apoi am obtinut matricea astfel: am generat folosind functia Math.random doua noduri, reprezentand capetele muchiei, apoi am adaugat
-in matricea de adiacenta. Am considerat ca vor fi maxim n*(n-1)/2 muchii.
+Pentru partea optionala, am verificat daca parametrul primit este valid(reprezinta un singur numar care este intreg, impar), apoi am obtinut matricea astfel: am generat folosind 
+functia Math.random doua noduri, reprezentand capetele muchiei, apoi am adaugat in matricea de adiacenta. Am considerat ca vor fi maxim n*(n-1)/2 muchii.
 
-Pentru a obtine arborele partial, am ales cate o muchie din graf astfel incat sa nu existe circuite, pana cand acesta devine conex.
+Pentru a obtine arborele partial, am ales cate o muchie din graf astfel incat sa nu existe circuite, pana cand acesta devine conex, utilizand parcurgerea dfs.
