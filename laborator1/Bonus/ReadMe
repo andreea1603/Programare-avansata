@@ -1,1 +1,7 @@
 
+Pentru a obtine arborele, generez cu functia Math.random() numarul de noduri, apoi folosind aceeasi functie, generez muchii 
+intre aceste noduri astfel incat sa nu se formeze circuite(cand se aleg 2 muchii, se verifica daca nu fac parte din aceeasi 
+componenta conexa) si graful sa fie conex la sfarsit. 
+
+Pentru afisare, parcurge graful prin DFS, adaugandu-se spatii in functie de nivelul pe care se afla nodul. Daca nodul este frunza, atunci
+prefixul acestuia este '-', altfel este '+'.
