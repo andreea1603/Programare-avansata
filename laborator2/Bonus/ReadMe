@@ -1,1 +1,8 @@
 
+Pentru partea de bonus, am folosit metoda de aproximare a lui Vogel,(calculam cea mai mica diferenta intre elementele ce apartin unei linii/coloane, notand valorile in 2 vectori(unul pentru linii, unul pentru coloane), apoi pentru cea mai mare valoare din
+cei doi vector, se va gasit cel mai mic cost de pe linia/coloana corespunzatoare valorii alese anterior.Astfel, obtinem prima pereche de sursa/destinatie si actualizam corespunzator variabilele demand si supply, apoi se va elimina linia/coloana corespunzatoare 
+valorii ce este acum nula dintre supply si demand. Procesul de repeta pana cand se epuizeaza toate valorile supply/demand ale tuturor surselor/destinatiilor) adaugand functii pentru calculul unei valori minime/maxime de pe o linie/coloana a unei matrice sau dintr-un vector.
+Am creat 3 scenarii posibile: 
+    1. rezolvarea exemplului din laborator
+    2.adaugarea valorilor de la tastatura
+    3.analiza timpului mediu pentru valori generate cu ajutorul functiei Math.random()
