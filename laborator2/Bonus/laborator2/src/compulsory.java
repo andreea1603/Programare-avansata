@@ -12,9 +12,10 @@ public class compulsory {
      */
     public static void main(String[] args) {
 
-        //boolean ok=false;
-        int ok = 2;
         long time_For_Each_Test=0;
+        Scanner scan1 = new Scanner(System.in);
+        System.out.println("Introduceti: \n\t 0 pentru a solutiona exemplul din laborator \n\t 1 pentru a adauga elementele de la tastatura \n\t 2 pentru a aflat timpul mediu pentru mai multe valori generate ");
+        int ok = scan1.nextInt();
         if (ok == 0) { //cazul descris in enuntul problemei
             Destination destinations[] = new Destination[3];
 
