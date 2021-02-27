@@ -1,1 +1,9 @@
 
+Pentru a nu permite adaugarea unor surse/destinatii de doua ori, verificam in constructorul problemei daca exista doua la fel. 
+
+Clasa solution contine matricea costurilor finale intre surse si destinatii, doi vectori de stringuri, unul ce va contine sursele, 
+iar celalat destinatiile(exista drumul de la s[i] la d[i], 0<=i<=n), un vector de unitati(cantitatea de la s[i] la d[i]), si 
+costul total. 
+
+Solutia problemei este una ineficienta, iterand prin fiecare sursa, si cautand cate o destinatie pana cand sursa are capacitatea 0.
+La initializarea problemei se verifica daca cererea si capacitatea destinatiei/sursei sunt egale, in caz contrar, nu exista solutie.
