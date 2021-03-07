@@ -17,9 +17,13 @@ public interface Visitable {
     }
 
     static Duration getVisitingDuration(Locations l2) {
-        LocalTime start = ((Visitable) (l2)).getOpeningTime();
-        LocalTime end = ((Visitable) (l2)).getClosingTime();
-        Duration timeLong = Duration.between(start, end);
+        if( l2 instanceof Visitable) {
+            LocalTime start = ((Visitable) (l2)).getOpeningTime();
+            LocalTime end = ((Visitable) (l2)).getClosingTime();
+            Duration timeLong = Duration.between(start, end);
+            return timeLong;
+        }
+        Duration timeLong=Duration.parse("0");
         return timeLong;
     }
 }
