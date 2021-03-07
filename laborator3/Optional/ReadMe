@@ -1,1 +1,12 @@
 
+Pentru prima cerinta m-am folosit de operatorul instanceof pentru a verifica daca locatia este vizitabila si admite taxa.
+Daca indeplineste conditiile, o voi adauga intr-o lista de locatii, pe care  le  voi  sorta  ulterior  in  functie de ora
+deschiderii, suprascriind operatorul toCompare din clasa Locations.
+
+Pentru cerintele 2 si 3 am modificat interfata Visitable, adaugand doua metode default, ce  returneaza  orele  specificate
+si  o metoda  statica ce primeste ca parametru o locatie, apoi  verifica  daca  este  vizitabila  si  calculeaza  folosind
+Duration.between, durata pe care este deshisa locatia.
+
+Pentru cerintele 4 si 5 am modificat clasa TravelPlan. Pentru a determina drumul dintre 2 locatii se foloseste algoritmul lui 
+Dijsktra. Algoritmul gaseste matricea corespunzatoare map-ului primit, apoi preia doua dintre preferintele vizitatorului, ce 
+sunt date ca fiind o lista de tip Stringsi le gaseste indicele corespunzator in matrice.
