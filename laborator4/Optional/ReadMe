@@ -1,0 +1,4 @@
+Pentru partea optionala, am creat o clasa Solution, in care se vor retine perechile de tip student, scoala asignata. Aceste perechi sunt determinate
+astfel: se sorteaza map-ul in care se retin preferintele studentilor in functie de nota obtinuta, apoi pentru fiecare student de verifica daca prima
+sa optiune mai are locuri disponibile. Daca da, atunci se formeaza perechea, si se scade un loc din capacitatea scolii, daca nu se trece la a urma-
+toarea optiune, pana cand se gaseste o scoala disponibila. 
