@@ -1,1 +1,15 @@
 
+(*) Pentru a citi comenzile, userul va introduce numele comenzii(add, list, play,  save, load),  apoi in  functie de cerintele  fiecareia, se vor cere 
+parametrii necesari.
+
+(*) Am creat o interfata, ce contine metoda execute. Aceasta este folosita de fiecare din clasele create pentru comenzi 
+  
+    -pentru comanda add, i se va cere userului tipul de item(song, book), numele, id-ul si locatia, apoi se va crea un obiect de tipul respectiv. Apoi 
+se va folosi metoda add din catalog.
+    -pentru comanda list, se vor printa toate informatiile detinute in catalog
+    -pentru play, se va folosi desktop.open(file)
+    -pentru load, i se va cere userului locatia fisierului dorit pentru a fi importat
+    -pentru save, i se va cere userului locatia fisierului dorit pentru a fi salvat
+    -pentru report, se va folosi un template, cu ajutorul caruia vor fi afisate toate informatiile curente despre catalog
+    
+(*) Cele 5 comenzi sunt tratate intr-un switch, iar in cazul in care niciuna dintre ele nu se regaseste, se va arunca o exceptie
