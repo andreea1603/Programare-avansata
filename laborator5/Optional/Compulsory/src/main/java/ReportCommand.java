@@ -28,7 +28,6 @@ public class ReportCommand implements Command {
         configuration.setClassForTemplateLoading(ReportCommand.class, "templates");
         configuration.setIncompatibleImprovements(new Version(2,3,20));
         configuration.setDefaultEncoding("UTF-8");
-        configuration.setLocale(Locale.US);
         configuration.setTemplateExceptionHandler(TemplateExceptionHandler.RETHROW_HANDLER);
         configuration.setDirectoryForTemplateLoading(new File("C:\\Users\\andre\\OneDrive\\Desktop\\Compulsory\\"));
 

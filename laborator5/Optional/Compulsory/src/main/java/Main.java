@@ -56,25 +56,8 @@ public class Main {
                     break;
                 }
                 case "add" : {
-                    System.out.println("Introduceti tipul itemului(book/song)");
-                    Scanner readCommand1 = new Scanner(System.in);
-                    String type = readCommand1.nextLine();
-                    System.out.println("Introduceti id-ul itemului");
-                    String id = readCommand1.nextLine();
-                    System.out.println("Introduceti numele itemului");
-                    String name = readCommand1.nextLine();
-                    System.out.println("Introduceti path-ul itemului");
-                    String path = readCommand1.nextLine();
-                    if (type.contains("book")) {
-                        Book b1 = new Book(name, id);
-                        b1.setLocation(path);
-                        c1.add(b1);
-                    }
-                    if (type.contains("song")) {
-                        Song s1 = new Song(name, id);
-                        s1.setLocation(path);
-                        c1.add(s1);
-                    }
+                    AddCommand add= new AddCommand(c1);
+                    add.execute();
                     break;
                 }
                 default: {
