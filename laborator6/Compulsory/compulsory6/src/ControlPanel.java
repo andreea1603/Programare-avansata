@@ -47,6 +47,7 @@ public class ControlPanel extends JPanel {
         this.frame.canvas.graphics= this.frame.canvas.image.createGraphics();
         this.frame.canvas.graphics.setBackground(Color.WHITE);
         this.frame.canvas.graphics.fillRect(0,0,this.frame.canvas.W,this.frame.canvas.H);
+
     }
     private void reset(){
         super.paint(this.frame.canvas.graphics);
