@@ -13,7 +13,7 @@ public class Panel extends JPanel{
     }
     private void init() {
         label = new JLabel("Type of shape:  ");
-        String[] types={"polygon", "circle"};
+        String[] types={"polygon", "circle" , "freedrawing", "drawlines"};
         typeOfShape= new JComboBox(types);
         add(label);
         add(typeOfShape);
