@@ -103,15 +103,14 @@ public class DrawingPanel extends JPanel implements MouseMotionListener {
 
         for(int i=0; i<positions.size()-1; i++)
         {
-                if((positions.get(i).x-positions.get(i+1).x)<-30 && up==1)
-                {
-                    ok=0;
-                    System.out.println("Dieferenta mai marem");
-                }
-                if((positions.get(i).y-positions.get(i+1).y)>30 && up==0)
+                if( up==1 && left==1 && (positions.get(i).x-60>positions.get(0).x || positions.get(i).x<positions.get(positions.size()-1).x-60 || positions.get(i).y-60>positions.get(positions.size()-1).y || positions.get(i).y<positions.get(0).y-100))
                 {
                     ok=0;
                 }
+                if(up==1 && left==0 && (positions.get(i).x<positions.get(0).x-60 || positions.get(i).x-60>positions.get(positions.size()-1).x || positions.get(i).y -60>positions.get(positions.size()-1).y|| positions.get(i).y<positions.get(0).y-100)){
+                    ok=0;
+                }
+
             }
         if(ok==1) {
             System.out.println("heeei:");
