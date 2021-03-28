@@ -170,7 +170,6 @@ public class DrawingPanel extends JPanel implements MouseMotionListener {
 
                     Color color = new Color(R, G, B);
                     graphics.setColor(color);
-                    FreeDrawing d= new FreeDrawing(frame, graphics, image);
                 }
         }
     }
