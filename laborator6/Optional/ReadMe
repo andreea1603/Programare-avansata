@@ -1,1 +1,14 @@
 
+(*) Pentru prima cerinta, am adaugat ca atribut al clasei DrawingPanel o  lista de forme (formele contin marimea, coordonatele x, y si numarul de laturi),
+    -Pentru a putea sterge formele, am adaugat o optiune in care utilizatorul  poate  alege daca este in modul "drawing" sau "delete", iar  in  cazul  in  
+    care se doreste stergerea, se retin coordonatele mouse-ul la apasare si se cauta in lista de forme daca exista  vreo  forma  care  sa  contina  acele 
+    coordonate.
+
+(*) Pe langa formele realizate pentru partea obligatorie, am adaugat cercul, in  cazul  in  care  se  selecteaza  aceasta  forma  geometrica, va  disparea 
+optiunea de "sides" pentru a alege laturile formelor.
+
+(*) In plus, fata de optiunile de "Regular polygon" si "Circle", am adaugat "free Drawing" si "lines"; pentru free drawing am folosit MouseMotionListener, 
+retinand toate coordonatele mouse-ul in momentul in care este apasat, apoi desenand linii intre fiecare 2 coordonate. 
+    -Pentru algoritmul de ShapeRecognition al liniilor, am retinut acele coordonate ale mouse-ului si pentru fiecare punct, am verificat daca coordonatele
+    x, y nu depasesc limitele in functie de situatie(daca de exemplu desenam o linie care merge in sus, stanga \, x nu trebuie sa fie mai mare decat x-ul 
+    punctului cel mai inalt, si nu trebuie sa fie mai mic decat x-ul celui mai de jos punct, analog pentru y) 
