@@ -59,7 +59,6 @@ public class DrawingPanel extends JPanel implements MouseMotionListener {
                     xf = e.getX();
                     yf = e.getY();
                     drawFree(xi, yi, xf, yf);
-                    System.out.println("hei, sunt aici");
                 }
                 if (((String) frame.newPanel.typeOfShape.getSelectedItem()).compareTo("drawlines") == 0){
                     xf = e.getX();
@@ -77,7 +76,6 @@ public class DrawingPanel extends JPanel implements MouseMotionListener {
 
     }
     private void drawFree(int xi, int yi,int  xf, int yf){
-        System.out.println("aM apelat free");
         graphics.setColor(Color.black);
         repaint();
         for(int i=0; i<positions.size()-1; i++)
@@ -86,19 +84,14 @@ public class DrawingPanel extends JPanel implements MouseMotionListener {
     }
     private void drawShape(int x, int y, int xf, int yf){
         int difX=(int)(positions.get(0).x-positions.get(positions.size()-1).x);
-        System.out.println(" x: " + positions.get(0).x +  " y : " + positions.get(positions.size()-1).x);
         int difY=(int)(positions.get(0).y-positions.get(positions.size()-1).y);
         int up=0, left=0;
         int ok=1;
-        System.out.println(difX);
-        System.out.println("intra aici");
         if(difX>0) {
             left = 1;
-            System.out.println("Merge la stanga");
         }
         if(difY>0){
             up=1;
-            System.out.println("Merge sus");
         }
 
         for(int i=0; i<positions.size()-1; i++)
@@ -113,7 +106,6 @@ public class DrawingPanel extends JPanel implements MouseMotionListener {
 
             }
         if(ok==1) {
-            System.out.println("heeei:");
             graphics.setColor(Color.black);
             graphics.drawLine(x, y, xf, yf);
         }
