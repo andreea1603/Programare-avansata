@@ -7,7 +7,7 @@ public class Test extends Thread {
         Scanner scan= new Scanner(System.in);
         int n= scan.nextInt();
         Buffer buffer= new Buffer();
-        Problem pb = new Problem(n);
+        Board pb = new Board(n);
         List<Player> players = new ArrayList<>();
         players.add(new Player(1, "player1", buffer));
         players.add(new Player(2, "player2", buffer));

@@ -1,15 +1,14 @@
 import java.util.ArrayList;
 import java.util.List;
-import java.util.concurrent.TransferQueue;
 
 public class Play {
     List<Player> players=new ArrayList<>();
-    Problem problem;
+    Board board;
 
-    public Play(List<Player> players, Problem p){
+    public Play(List<Player> players, Board p){
         super();
         this.players= players;
-        this.problem=p;
+        this.board =p;
         try{
             Thread.sleep(600);
         }
