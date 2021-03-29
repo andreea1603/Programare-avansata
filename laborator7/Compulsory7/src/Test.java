@@ -7,7 +7,7 @@ public class Test extends Thread {
         Scanner scan= new Scanner(System.in);
         int n= scan.nextInt();
         Buffer buffer= new Buffer();
-        Problem pb = new Problem((n-1)*n);
+        Problem pb = new Problem(n);
         List<Player> players = new ArrayList<>();
         players.add(new Player(1, "player1", buffer));
         players.add(new Player(2, "player2", buffer));
@@ -16,7 +16,7 @@ public class Test extends Thread {
 
         Play play= new Play(players, pb);
         buffer.setTokens(pb.pair);
-            for (int i = 0; i < 4; i++) {
+            for (int i = 0; i < players.size(); i++) {
                 play.players.get(i).start();
                 try {
                     Thread.sleep(10);

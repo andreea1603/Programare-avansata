@@ -8,7 +8,7 @@ public class Problem {
     public Problem(int n)
     {
         int ok=1;
-        for(int i=0; i<n; i++) {
+        for(int i=0; i<n*(n-1); i++) {
             ok=1;
             int first, second, value;
             first = (int) (Math.random() * 100000) % n + 1;

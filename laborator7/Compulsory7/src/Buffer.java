@@ -58,7 +58,10 @@ public class Buffer {
         notifyAll();
     }
     void getPairs(){
-        System.out.println(asignedTokens);
+        //System.out.println(asignedTokens);
+        for(Map.Entry i : asignedTokens.entrySet()){
+            System.out.println("Player number: " + i.getValue() + " " + i.getKey() );
+        }
     }
 
 }
