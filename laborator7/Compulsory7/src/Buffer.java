@@ -8,9 +8,8 @@ public class Buffer {
     private  boolean available= false;
     private int turn =1;
     private int maximum_Player=4;
-    List<Pair> tokens= new ArrayList<>();
-
-    Map<Pair, Integer> asignedTokens= new HashMap<>();
+    List<Pair> tokens= new ArrayList<>(); //toti tokenii disponibili
+    Map<Pair, Integer> asignedTokens= new HashMap<>();//tokenii asignati unui jucator
 
 
     public void setTokens(List<Pair> tokens)
@@ -46,13 +45,15 @@ public class Buffer {
         }
         if(tokens.size()>0)
         {
-            this.asignedTokens.put(tokens.get(0),turn);
-            tokens.remove(0);
+            int nrToken=(int)(Math.random()*10000)%tokens.size();
+            this.asignedTokens.put(tokens.get(nrToken),turn);
+            tokens.remove(nrToken);
         }
         if(maximum_Player==number)
             this.turn= 1;
         else
             this.turn=number+1;
+
         available= true;
         notifyAll();
     }
