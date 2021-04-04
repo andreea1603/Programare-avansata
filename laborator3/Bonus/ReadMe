@@ -1,0 +1,5 @@
+Pentru partea de bonus, am implementat un algoritm ce gaseste toate circuitele posibile ce pornesc de la hotel(locatia initiala)
+si se incadreaza in timpul de vizita alocat zilelor.
+Pentru a le selecta pe cele mai potrivite, le extrag pe cele care contin cele mai multe locatii, dar si care aduc cel putin o lo-
+catie noua fata de cele vizitate anterior. In cazul in care numarul de circuite ramase este mai mic decat numarul de zile, atunci
+se vor adauga toate circuitele ramase.
