@@ -32,8 +32,6 @@ public class Buffer {
         this.maximum_Player= x;
     }
     public synchronized void put (int number, int strategy ) {
-
-
         while(number != this.turn ){
             try {
                 wait () ;

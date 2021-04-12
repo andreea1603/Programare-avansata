@@ -19,7 +19,7 @@ public class Player extends Thread {
         this.strategy= strategy;
     }
 
-    synchronized public void run(){
+    public void run(){
         while(buffer.tokens.size()>0){
             buffer.put(this.turn, this.strategy);
             if(this.buffer.tokens.size()>0)

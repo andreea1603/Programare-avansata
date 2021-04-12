@@ -7,10 +7,6 @@ public class Test extends Thread{
         Scanner scan= new Scanner(System.in);
         //NewThread daemonThread = new NewThread();
 
-        DaemonThread t1=new DaemonThread();
-        t1.setDaemon(true);
-
-        t1.start();
         Thread timeKeeper = new Thread();
         timeKeeper.setDaemon(true);
         timeKeeper.start();
