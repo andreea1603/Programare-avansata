@@ -1,0 +1,5 @@
+(*) Pentru a calcula castigatorul, se inmulteste numarul de elemente ale circuitului format cu numarul de
+piese de pe tabla; 
+
+(*)Pentru o alegere manuala, jucatorul va citi de la tastatura, iar pentru cea automata, se va alege un 
+numar la intamplare
