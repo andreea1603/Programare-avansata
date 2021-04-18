@@ -1,0 +1,10 @@
+(*) Pentru fiecare tabela, am creat o clasa (actors, directors, movies, genres, assoc)
+
+(*) actors, director, genres contin (nume, id)
+    movies (id, titlu, data, durata, rating)
+
+(*) Pentru a importa datele din fisierul csv, am folosit CSVReader, extragand datele necesare pentru adaugarea in baza 
+de date. Aceste operatii se realizeaza in clasa tool, existand o lista cu toatedatele necesare ficarei tabele.
+
+(*) In clasa DAO, au fost adaugate metode pentru inserarea initiala a tuturor valorilor din fisierul csv, in fiecare
+tabela,avand ca parametrii coloanele necesare, obtinute in urma prelucrarii fisierului csv.
