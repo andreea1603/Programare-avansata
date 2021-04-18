@@ -8,7 +8,7 @@ public class Singleton {
     public Connection conn=null;
 
     private Singleton(){
-        String url="jdbc:mysql://localhost";
+        String url="jdbc:mysql://localhost/REGISTRATION";
         String user="root";
         String pass="";
         Statement st = null;
