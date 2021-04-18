@@ -7,7 +7,6 @@ public class Compulsory {
         Connection conn= s.conn;
 
         Statement stm= conn.createStatement();
-        System.out.println("yei");
 
         String sql="CREATE TABLE IF NOT EXISTS movies (id INTEGER, title VARCHAR(200), release_date DATE, duration INTEGER, score INTEGER)";
 
@@ -18,7 +17,7 @@ public class Compulsory {
         stm.executeUpdate(sql);
 
 
-        String state="INSERT INTO movies values(1, 'salut', '2015-12-13', 14, 18)";
+        String state="INSERT INTO movies values(1, 'film', '2015-12-13', 14, 18)";
         stm.executeUpdate(state);
 
         System.out.println("Am adaugat");
