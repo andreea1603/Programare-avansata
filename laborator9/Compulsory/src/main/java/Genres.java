@@ -3,6 +3,12 @@ import java.io.Serializable;
 
 @Entity
 @Table(name = "genres")
+@NamedQueries(
+        {
+                @NamedQuery(name="Genres.findByName",
+                query="SELECT nume from genres where genres.name=:=name")
+        }
+)
 public class Genres implements Serializable {
     @Id
     @SequenceGenerator(name = "sequence",
