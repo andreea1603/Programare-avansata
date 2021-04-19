@@ -4,7 +4,16 @@
     movies (id, titlu, data, durata, rating)
 
 (*) Pentru a importa datele din fisierul csv, am folosit CSVReader, extragand datele necesare pentru adaugarea in baza 
-de date. Aceste operatii se realizeaza in clasa tool, existand o lista cu toatedatele necesare ficarei tabele.
+de date. Aceste operatii se realizeaza in clasa tool, existand o lista cu toate datele necesare fiecarei tabele.
+    -getComposedGenres, getComposedActors si getComposedDirectors extrag din fisierului csv coloana necesara, reprezentand
+    date formate din nume compuse( de ex. : coloana gen contine Comedie, Familie, Drama);
+    -functiile addDifferentDirectors, addDifferentActors, addDifferentGenres, preiau  informatiile  obtinute  de functiile
+    descrise mai sus si le separa, astfel incat fiecare gen/actor/regizor sa aiba propriul id, si fiecare gen/actor/regizor
+    sa fie unic
 
-(*) In clasa DAO, au fost adaugate metode pentru inserarea initiala a tuturor valorilor din fisierul csv, in fiecare
-tabela,avand ca parametrii coloanele necesare, obtinute in urma prelucrarii fisierului csv.
+(*) In clasele DAO, au fost adaugate metode pentru:
+      -inserarea initiala a tuturor valorilor din fisierul csv, in fiecare tabela,avand ca parametrii coloanele necesare,
+        obtinute in urma prelucrarii fisierului csv;
+      -inserarea datelor introduse de utilizator in tabela;
+      -cautarea unui film/gen dupa id dat de utilizator;
+

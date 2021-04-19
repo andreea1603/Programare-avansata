@@ -8,4 +8,14 @@ public class Movie {
         this.score = score;
         this.title = title;
     }
+
+    @Override
+    public String toString() {
+        return "Movie{" +
+                "id=" + id +
+                ", duration=" + duration +
+                ", score=" + score +
+                ", title='" + title + '\'' +
+                '}';
+    }
 }

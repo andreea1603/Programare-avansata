@@ -17,7 +17,7 @@ public class Tool {
     List<String> directors=new ArrayList<>();
 
 
-    List<String> getGenres(){
+    List<String> getComposedGenres(){
         List<String> allGenres=new ArrayList<>();
         try (CSVReader reader = new CSVReader(new FileReader("C:\\Users\\andre\\OneDrive\\Desktop\\pa\\Programare-avansata\\laborator8\\Optional\\Compulsory8\\src\\main\\java\\IMDbMovies.csv"))) {
             String[] lineInArray;
@@ -31,8 +31,7 @@ public class Tool {
     }
     void addDifferentGenres(){
         List<String> compuseGenres=new ArrayList<>();
-
-        compuseGenres=getGenres();
+        compuseGenres=getComposedGenres();
 
         for(int i=0; i<compuseGenres.size(); i++){
             String arr[]= compuseGenres.get(i).split(",");
@@ -43,7 +42,6 @@ public class Tool {
                     this.genres.add(arr[j]);
                 }
             }
-
         }
     }
     void putMovies(){
@@ -57,14 +55,12 @@ public class Tool {
             e.printStackTrace();
         }
 
-
     }
     void putDuration(){
         int k=0;
         try (CSVReader reader = new CSVReader(new FileReader("C:\\Users\\andre\\OneDrive\\Desktop\\pa\\Programare-avansata\\laborator8\\Optional\\Compulsory8\\src\\main\\java\\IMDbMovies.csv"))) {
             String[] lineInArray;
             while ((lineInArray = reader.readNext()) != null) {
-               // System.out.println(lineInArray[6]);
                 if(k!=0)
                     this.duration.add(Integer.parseInt(lineInArray[6]));
                 k++;
@@ -72,27 +68,22 @@ public class Tool {
         } catch (IOException e) {
             e.printStackTrace();
         }
-
     }
-
     void putScore(){
         int k=0;
         try (CSVReader reader = new CSVReader(new FileReader("C:\\Users\\andre\\OneDrive\\Desktop\\pa\\Programare-avansata\\laborator8\\Optional\\Compulsory8\\src\\main\\java\\IMDbMovies.csv"))) {
             String[] lineInArray;
             while ((lineInArray = reader.readNext()) != null) {
-               // System.out.println(lineInArray[15]);
                 if(k!=0)
                     this.score.add((int)(Float.parseFloat(lineInArray[14])));
-
                 k++;
             }
         } catch (IOException e) {
             e.printStackTrace();
         }
-
     }
 
-    List<String> getActors(){
+    List<String> getComposedActors(){
         List<String> allActors=new ArrayList<>();
         try (CSVReader reader = new CSVReader(new FileReader("C:\\Users\\andre\\OneDrive\\Desktop\\pa\\Programare-avansata\\laborator8\\Optional\\Compulsory8\\src\\main\\java\\IMDbMovies.csv"))) {
             String[] lineInArray;
@@ -104,8 +95,36 @@ public class Tool {
         }
         return allActors;
     }
+    void addDifferentActors(){
 
-    List<String> getDirectors(){
+        List<String> compuseActors=new ArrayList<>();
+        compuseActors=getComposedActors();
+
+        for(int i=0; i<15000; i++){
+            String arr[]= compuseActors.get(i).split(",");
+            for(int j=0;j<arr.length; j++)
+            {
+                if(this.actors.contains(arr[j])==false)
+                    this.actors.add(arr[j]);
+            }
+        }
+    }
+
+    void addDifferentDirectors(){
+        List<String> compuseDirectors=new ArrayList<>();
+        compuseDirectors=getCompusedDirectors();
+
+        for(int i=0; i<15000; i++){
+            String arr[]= compuseDirectors.get(i).split(",");
+            for(int j=0;j<arr.length; j++)
+            {
+                if(this.directors.contains(arr[j])==false){
+                    this.directors.add(arr[j]);
+                }
+            }
+        }
+    }
+    List<String> getCompusedDirectors(){
         List<String> allDirectors=new ArrayList<>();
         try (CSVReader reader = new CSVReader(new FileReader("C:\\Users\\andre\\OneDrive\\Desktop\\pa\\Programare-avansata\\laborator8\\Optional\\Compulsory8\\src\\main\\java\\IMDbMovies.csv"))) {
             String[] lineInArray;
@@ -117,49 +136,4 @@ public class Tool {
         }
         return allDirectors;
     }
-
-    void addDifferentActors(){
-        List<String> compuseActors=new ArrayList<>();
-
-        System.out.println("hei inainte");
-
-        compuseActors=getActors();
-
-        System.out.println("hei am luat");
-        System.out.println(compuseActors.size());
-        for(int i=0; i<10000; i++){
-            //System.out.println("hei, sunt aici");
-            String arr[]= compuseActors.get(i).split(",");
-            for(int j=0;j<arr.length; j++)
-            {
-                // System.out.println(arr[j]);
-                if(this.actors.contains(arr[j])==false){
-                    this.actors.add(arr[j]);
-                }
-            }
-        }
-    }
-
-    void addDifferentDirectors(){
-        List<String> compuseDirectors=new ArrayList<>();
-
-        System.out.println("hei inainte");
-
-        compuseDirectors=getActors();
-
-        System.out.println("hei am luat");
-        System.out.println(compuseDirectors.size());
-        for(int i=0; i<10000; i++){
-            //System.out.println("hei, sunt aici");
-            String arr[]= compuseDirectors.get(i).split(",");
-            for(int j=0;j<arr.length; j++)
-            {
-                // System.out.println(arr[j]);
-                if(this.directors.contains(arr[j])==false){
-                    this.directors.add(arr[j]);
-                }
-            }
-        }
-    }
-
 }
