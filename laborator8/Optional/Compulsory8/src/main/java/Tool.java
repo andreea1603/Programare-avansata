@@ -19,7 +19,7 @@ public class Tool {
 
     List<String> getGenres(){
         List<String> allGenres=new ArrayList<>();
-        try (CSVReader reader = new CSVReader(new FileReader("C:\\Users\\andre\\OneDrive\\Desktop\\Compulsory8\\src\\main\\java\\IMDbMovies.csv"))) {
+        try (CSVReader reader = new CSVReader(new FileReader("C:\\Users\\andre\\OneDrive\\Desktop\\pa\\Programare-avansata\\laborator8\\Optional\\Compulsory8\\src\\main\\java\\IMDbMovies.csv"))) {
             String[] lineInArray;
             while ((lineInArray = reader.readNext()) != null) {
                 allGenres.add(lineInArray[5]);
@@ -48,7 +48,7 @@ public class Tool {
     }
     void putMovies(){
         List<String> allMovies=new ArrayList<>();
-        try (CSVReader reader = new CSVReader(new FileReader("C:\\Users\\andre\\OneDrive\\Desktop\\Compulsory8\\src\\main\\java\\IMDbMovies.csv"))) {
+        try (CSVReader reader = new CSVReader(new FileReader("C:\\Users\\andre\\OneDrive\\Desktop\\pa\\Programare-avansata\\laborator8\\Optional\\Compulsory8\\src\\main\\java\\IMDbMovies.csv"))) {
             String[] lineInArray;
             while ((lineInArray = reader.readNext()) != null) {
                 this.movies.add(lineInArray[2]);
@@ -61,7 +61,7 @@ public class Tool {
     }
     void putDuration(){
         int k=0;
-        try (CSVReader reader = new CSVReader(new FileReader("C:\\Users\\andre\\OneDrive\\Desktop\\Compulsory8\\src\\main\\java\\IMDbMovies.csv"))) {
+        try (CSVReader reader = new CSVReader(new FileReader("C:\\Users\\andre\\OneDrive\\Desktop\\pa\\Programare-avansata\\laborator8\\Optional\\Compulsory8\\src\\main\\java\\IMDbMovies.csv"))) {
             String[] lineInArray;
             while ((lineInArray = reader.readNext()) != null) {
                // System.out.println(lineInArray[6]);
@@ -77,7 +77,7 @@ public class Tool {
 
     void putScore(){
         int k=0;
-        try (CSVReader reader = new CSVReader(new FileReader("C:\\Users\\andre\\OneDrive\\Desktop\\Compulsory8\\src\\main\\java\\IMDbMovies.csv"))) {
+        try (CSVReader reader = new CSVReader(new FileReader("C:\\Users\\andre\\OneDrive\\Desktop\\pa\\Programare-avansata\\laborator8\\Optional\\Compulsory8\\src\\main\\java\\IMDbMovies.csv"))) {
             String[] lineInArray;
             while ((lineInArray = reader.readNext()) != null) {
                // System.out.println(lineInArray[15]);
@@ -94,7 +94,7 @@ public class Tool {
 
     List<String> getActors(){
         List<String> allActors=new ArrayList<>();
-        try (CSVReader reader = new CSVReader(new FileReader("C:\\Users\\andre\\OneDrive\\Desktop\\Compulsory8\\src\\main\\java\\IMDbMovies.csv"))) {
+        try (CSVReader reader = new CSVReader(new FileReader("C:\\Users\\andre\\OneDrive\\Desktop\\pa\\Programare-avansata\\laborator8\\Optional\\Compulsory8\\src\\main\\java\\IMDbMovies.csv"))) {
             String[] lineInArray;
             while ((lineInArray = reader.readNext()) != null) {
                 allActors.add(lineInArray[12]);
@@ -107,7 +107,7 @@ public class Tool {
 
     List<String> getDirectors(){
         List<String> allDirectors=new ArrayList<>();
-        try (CSVReader reader = new CSVReader(new FileReader("C:\\Users\\andre\\OneDrive\\Desktop\\Compulsory8\\src\\main\\java\\IMDbMovies.csv"))) {
+        try (CSVReader reader = new CSVReader(new FileReader("C:\\Users\\andre\\OneDrive\\Desktop\\pa\\Programare-avansata\\laborator8\\Optional\\Compulsory8\\src\\main\\java\\IMDbMovies.csv"))) {
             String[] lineInArray;
             while ((lineInArray = reader.readNext()) != null) {
                 allDirectors.add(lineInArray[9]);
