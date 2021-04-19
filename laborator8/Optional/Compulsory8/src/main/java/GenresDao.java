@@ -31,12 +31,14 @@ public class GenresDao {
 
     GenresDao(Statement stm, List<String> genres) throws SQLException {
 
-        for(int i=0; i<genres.size(); i++) {
+       /* for(int i=0; i<genres.size(); i++) {
 
             String state = "INSERT INTO genres values(" + i + ",'" + genres.get(i) + "')";
             stm.executeUpdate(state);
             genre.add(new Genre(i, genres.get(i)));
         }
+
+        */
 
 
     }

@@ -1,21 +1,21 @@
 import com.opencsv.CSVReader;
+import freemarker.template.TemplateException;
+import org.apache.commons.collections.ArrayStack;
 
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.sql.*;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-import java.util.Scanner;
+import java.util.*;
 
 
 public class Compulsory {
-    public static void main(String[] args) throws SQLException, FileNotFoundException {
+    public static void main(String[] args) throws SQLException, IOException, TemplateException {
         String diver="com.sql.jdbc.Driver";
         Singleton s= Singleton.getInstance();
         Connection conn= s.conn;
+        HashMap<String, String> search =new HashMap<>();
 
         Statement stm= conn.createStatement();
 
@@ -35,12 +35,12 @@ public class Compulsory {
 
         /// import data from csv
         Tool t=new Tool();
-        t.addDifferentGenres();
-        t.putMovies();
-        t.putDuration();
-        t.putScore();
-        t.addDifferentDirectors();
-        t.addDifferentActors();
+      //  t.addDifferentGenres();
+      //  t.putMovies();
+     //   t.putDuration();
+     //   t.putScore();
+     //   t.addDifferentDirectors();
+     //   t.addDifferentActors();
 
         //generare date initiale
         MovieDao movieDao=new MovieDao(stm, t.movies, t.duration, t.score);
@@ -57,8 +57,11 @@ public class Compulsory {
             System.out.println("\t3)Cauta un film \n\t4)Cauta un gen\n\t5)Iesire");
             option=scan.nextInt();
 
-            if(option==5)
-                ok=1;
+            if(option==5) {
+                ok = 1;
+                Report r=new Report();
+                r.getTemplate(search);
+            }
             else
                 if(option==1){
                     System.out.println("Introduceti nume, durata si scor");
@@ -67,6 +70,7 @@ public class Compulsory {
                     int durata= scan2.nextInt();
                     int scor=scan2.nextInt();
                     movieDao.insertMovie(conn,t.movies.size()+1, nume, durata, scor);
+                    search.put("Inserare film", nume);
                 }
                 else
                     if(option==2){
@@ -74,23 +78,28 @@ public class Compulsory {
                         Scanner scan2= new Scanner(System.in);
                         String nume=scan2.nextLine();
                         genresDao.insertGenres(conn, t.genres.size(), nume);
-
+                        search.put("Inserare gen" , nume);
                     }
                     else
                         if(option==3){
                             System.out.println("Introduceti id-ul filmului");
                             Scanner scan2= new Scanner(System.in);
                             int id=scan2.nextInt();
-                            System.out.println(movieDao.findMovie(id, conn));
+                            Movie result=movieDao.findMovie(id, conn);
+                            System.out.println(result);
+                            search.put("Cautare film", result.title );
                         }
                         else
                             if(option==4){
                                 System.out.println("Introduceti id-ul genului");
                                 Scanner scan2= new Scanner(System.in);
                                 int id=scan2.nextInt();
-                                System.out.println(genresDao.findGenre(id, conn));
+                                Genre result=genresDao.findGenre(id, conn);
+                                System.out.println(result);
+                                search.put("Cautare gen", result.name);
                             }
         }
+
     }
 }
 

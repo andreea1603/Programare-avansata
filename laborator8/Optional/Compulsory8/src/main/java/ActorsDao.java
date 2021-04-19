@@ -8,7 +8,7 @@ public class ActorsDao {
 
      ActorsDao(Statement stm, List<String> actors) throws SQLException {
 
-         String state="";
+      /*   String state="";
          try {
              for (int i = 0; i < actors.size(); i++) {
                  state = "INSERT INTO actors values('" + actors.get(i) + "'," + i + ")";
@@ -20,7 +20,11 @@ public class ActorsDao {
              System.out.println("Nu s-a adaugat " + state);
          }
 
+       */
+
     }
+
+
 
     @Override
     public String toString() {

@@ -17,3 +17,5 @@ de date. Aceste operatii se realizeaza in clasa tool, existand o lista cu toate 
       -inserarea datelor introduse de utilizator in tabela;
       -cautarea unui film/gen dupa id dat de utilizator;
 
+(*) Pentru a genera raportul HTML, se foloseste FreeMarker; la momentul iesirii din aplicatie, se va afisa un istoric al
+operatiile facute de utilizator, cum ar fi: inserare sau cautare, urmate de numele genului/filmului introdus

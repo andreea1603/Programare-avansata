@@ -32,7 +32,8 @@ public class MovieDao {
         return (new Movie(id,duration, score, nume));
     }
      MovieDao(Statement stm, List<String> movie, List<Integer> duration, List<Integer> score) throws SQLException {
-         for (int i = 0; i < movie.size(); i++) {
+
+        /* for (int i = 0; i < movie.size(); i++) {
              try {
                  String state = "INSERT INTO movies values(" + i + ",'" + movie.get(i) + "'," + " '2017/12/13' , " + duration.get(i) + ", " + score.get(i) + ")";
                  this.movie.add(new Movie(i, duration.get(i), score.get(i), movie.get(i)));
@@ -41,8 +42,6 @@ public class MovieDao {
                  System.out.println( "Filmul" + i + " nu a fost adaugat");
              }
          }
-
-
-
+         */
      }
 }
