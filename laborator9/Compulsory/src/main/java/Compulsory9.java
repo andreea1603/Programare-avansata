@@ -20,6 +20,7 @@ public class Compulsory9 {
 
         em.close();
         emf.close();
+        
     }
 
 
