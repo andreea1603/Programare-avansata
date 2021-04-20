@@ -1,7 +1,7 @@
 import javax.persistence.*;
 import java.io.Serializable;
 
-public class compulsory9 {
+public class Compulsory9 {
     public static void main(String[] args) {
 
         EntityManagerFactory emf=
