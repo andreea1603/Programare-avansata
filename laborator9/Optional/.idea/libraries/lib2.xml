@@ -1,0 +1,19 @@
+<component name="libraryTable">
+  <library name="lib2">
+    <ANNOTATIONS>
+      <root url="file://$USER_HOME$/OneDrive/Desktop/com.vogella.freemarker.first/lib" />
+    </ANNOTATIONS>
+    <CLASSES>
+      <root url="file://$USER_HOME$/OneDrive/Desktop/com.vogella.freemarker.first/lib" />
+    </CLASSES>
+    <JAVADOC />
+    <NATIVE>
+      <root url="file://$USER_HOME$/OneDrive/Desktop/com.vogella.freemarker.first/lib" />
+    </NATIVE>
+    <SOURCES>
+      <root url="file://$USER_HOME$/OneDrive/Desktop/com.vogella.freemarker.first/lib" />
+    </SOURCES>
+    <jarDirectory url="file://$USER_HOME$/OneDrive/Desktop/com.vogella.freemarker.first/lib" recursive="false" />
+    <jarDirectory url="file://$USER_HOME$/OneDrive/Desktop/com.vogella.freemarker.first/lib" recursive="false" type="SOURCES" />
+  </library>
+</component>
