@@ -16,7 +16,7 @@ public class Main {
         File config= new File("Config.txt");
         Scanner choose= new Scanner(config);
         String option=choose.nextLine();
-        if(option.compareTo("JDBC")==0){
+        if(option.compareTo("JPA")==0){
             Compulsory9.main(null);
         }
         else{
