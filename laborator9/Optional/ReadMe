@@ -1,0 +1,8 @@
+(*) Pentru chart-uri am folosit libraria JFreeCharts 
+
+(*) Pentru a doua cerinta am adaugat o interfata, dupa care sunt implementate clasele RepositoryGenres si RepositoryMovies
+
+(*) Pentru a treia cerinta, am adaugat codul din cadrul laboratorului 8 fiind pus intr-un pachet diferit
+
+(*) Pentru a treia cerinta, am facut un fisier in care se va retine daca se doreste sa se foloseasca JPA sau JDBC, iar in 
+functie de acesta, se va porni aplicatia corespunzator.
