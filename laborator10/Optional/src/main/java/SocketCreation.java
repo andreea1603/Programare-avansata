@@ -20,7 +20,8 @@ public class SocketCreation {
                 new ClientThread(socket, serverSocket, buffer).start();
             }
         } catch (IOException e) {
-            System.err. println ("Ooops... " + e);
+            if(serverSocket.isClosed())
+              System.out.println("Connection Closed.");
         } finally {
             if(!serverSocket.isClosed())
                 serverSocket.close();

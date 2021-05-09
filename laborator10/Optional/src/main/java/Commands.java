@@ -23,7 +23,6 @@ public class Commands {
     }
     List<String> read(List<Messages> messages, String username, Users users){
         System.out.println();
-        System.out.println("AM INTRAT IN READ");
         List<String> myMessages=new ArrayList<>();
         List<String> myfriends= getFriends(username, users.friendships);
         for(int i=0; i<messages.size(); i++){
@@ -32,7 +31,7 @@ public class Commands {
                     myMessages.add(messages.get(i).message);
             }
         }
-        System.out.println(myfriends);
+        //System.out.println(myfriends);
         if(myMessages.size()==0)
             myMessages.add("no messages");
         return myMessages;

@@ -2,8 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5ffdddfc-47bf-483a-bb66-e2252b54b1be" name="Default Changelist" comment=".">
-      <change beforePath="$PROJECT_DIR$/out/production/Compulsory6/DrawingPanel.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Compulsory6/DrawingPanel.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DrawingPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DrawingPanel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/laborator10/Optional/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/laborator10/Optional/src/main/java/Buffer.java" beforeDir="false" afterPath="$PROJECT_DIR$/laborator10/Optional/src/main/java/Buffer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/laborator10/Optional/src/main/java/ClientThread.java" beforeDir="false" afterPath="$PROJECT_DIR$/laborator10/Optional/src/main/java/ClientThread.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/laborator10/Optional/src/main/java/SocketCreation.java" beforeDir="false" afterPath="$PROJECT_DIR$/laborator10/Optional/src/main/java/SocketCreation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/laborator10/Optional/target/classes/Buffer.class" beforeDir="false" afterPath="$PROJECT_DIR$/laborator10/Optional/target/classes/Buffer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/laborator10/Optional/target/classes/ClientThread.class" beforeDir="false" afterPath="$PROJECT_DIR$/laborator10/Optional/target/classes/ClientThread.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/laborator10/Optional/target/classes/CompleteGrapthDemo$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/laborator10/Optional/target/classes/CompleteGrapthDemo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/laborator10/Optional/target/classes/SocketCreation.class" beforeDir="false" afterPath="$PROJECT_DIR$/laborator10/Optional/target/classes/SocketCreation.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -114,6 +121,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="m" />

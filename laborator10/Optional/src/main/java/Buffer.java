@@ -16,7 +16,7 @@ public class Buffer {
         if(option.compareTo("login")==0 || option.compareTo("register")==0){
             username=parsedRequest.get(1);
         }
-        System.out.println(parsedRequest);
+        //System.out.println(parsedRequest);
 
         String message=null;
         List<String> friends=new ArrayList<>();
@@ -26,11 +26,11 @@ public class Buffer {
         if(option.compareTo("friend")==0)
             for(int i=1; i<parsedRequest.size(); i++)
                 friends.add(parsedRequest.get(i));
-        System.out.println(friends);
+        //System.out.println(friends);
 
         int ok=0;
         String response=null;
-        System.out.println("Username: " + username);
+        //System.out.println("Username: " + username);
             switch (option) {
                 case "register":
                     commands.register(username, users);
@@ -54,7 +54,7 @@ public class Buffer {
                 case "read":
                 {
                     commands.read(messages, username, users);
-                    System.out.println("aveti un mesaj nou: ");
+                  //  System.out.println("aveti un mesaj nou: ");
                     System.out.println(commands.read(messages, username, users));
                     response=commands.read(messages, username, users).toString();
                     break;
@@ -75,6 +75,7 @@ public class Buffer {
         List<String> commands=new ArrayList<>();
 
         String s="";
+
         for(int i=0; i< request.length(); i++){
             if(request.charAt(i)!=' '){
 

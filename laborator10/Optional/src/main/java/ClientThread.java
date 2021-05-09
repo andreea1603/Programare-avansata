@@ -40,10 +40,17 @@ class ClientThread extends Thread {
                     username=commands.get(1);
                 }
 
-                System.out.println(buffer.users);
-                System.out.println(buffer.messages);
+                if(commands.get(0).compareTo("exit")==0){
+                    raspuns="Server stopped";
+                    out.println(raspuns);
+                    out.flush();
+
+                    ok=1;
+                }
+                //System.out.println(buffer.users);
+                //System.out.println(buffer.messages);
                 raspuns=buffer.put(request, username);
-                System.out.println("RASPUNSUL ESTE:" + raspuns);
+
                 if(request.compareTo("stop")==0)
                 {
                     raspuns="Server stopped";
@@ -70,6 +77,7 @@ class ClientThread extends Thread {
         List<String> commands=new ArrayList<>();
 
         String s="";
+
         for(int i=0; i< request.length(); i++){
             if(request.charAt(i)!=' '){
 
