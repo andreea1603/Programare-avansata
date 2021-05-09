@@ -17,6 +17,7 @@ public class TravelPlan {
         this.preferences = Preferences;
     }
 
+    //transpune harta intr-o matrice, costul fiind timpul de a ajunge de la un punct la altul
     void toMatrix() {
 
         costs = new int[oras.locations.size()][oras.locations.size()];
@@ -31,9 +32,10 @@ public class TravelPlan {
                     costs[j][i] = oras.locations.get(i).time1.get(oras.locations.get(j));
                 }
             }
-        System.out.println("Costul este de : " + findCost());
+    //    System.out.println("Costul este de : " + findCost());
     }
 
+    //returneaza pozitia unei locatii in lista
     int getIndex(String l1) {
         for (int i = 0; i < oras.locations.size(); i++) {
             if (oras.locations.get(i).name.equals(l1)) {
@@ -43,7 +45,7 @@ public class TravelPlan {
         }
         return -1;
     }
-
+    //cea mai mica distanta
     int minimumDistanceVertex(int[] visited, int[] distance) {
         int position = -1;
         int min = Integer.MAX_VALUE;
@@ -56,6 +58,7 @@ public class TravelPlan {
         return position;
     }
 
+    //daca toate nodurile sunt vizitate
     int visitedNodes(int[] visited) {
         for (int i = 0; i < visited.length; i++)
             if (visited[i] == 0)
@@ -90,7 +93,7 @@ public class TravelPlan {
         }
         return distance[end];
     }
-
+/*
     int findCost() {
         int start = getIndex("Museum B");
         int end = getIndex("Hotel1");
@@ -100,6 +103,8 @@ public class TravelPlan {
         }
         return dijkstra(start, end);
     }
+
+ */
     int dfs(int x, int visited[], int start,List<Integer> order, int k, int timePerDay)
     {
         if(visited[x]==1){
@@ -112,16 +117,16 @@ public class TravelPlan {
                         totalTime=totalTime+costs[i][i+1];
 
                  if(totalTime<timePerDay) {
-                     System.out.println(totalTime);
+                     //System.out.println(totalTime);
                      List<Integer> days=new ArrayList<>();
 
-                     System.out.println("Circuitul format: ");
+                     //System.out.println("Circuitul format: ");
                      for (int i = 0; i < order.size(); i++) {
-                         System.out.print(order.get(i) + " ");
+                       //  System.out.print(order.get(i) + " ");
                          days.add(order.get(i));
                      }
                      this.plans.put(k, days);
-                     System.out.println();
+                     //System.out.println();
                      return 0;
                  }
             }
@@ -159,7 +164,7 @@ public class TravelPlan {
 
             if(ok==1 || (plans.size()-1)<= i) {
                 if((plans.size()-1)<= i)
-                    System.out.println("am intrat si aici");
+                    System.out.println("a");
                 planByDays.put(planByDays.size(), namesOfLocation);
             }
         }

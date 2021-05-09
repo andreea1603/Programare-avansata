@@ -69,8 +69,9 @@ public class Optional {
         t1.toMatrix(); //afiseaza distanta intre 2 locatii
         //if ( v2 instanceof Visitable)
         //   System.out.println(((Visitable) v2).getOpeningTime()); //foloseste metoda default
-        System.out.println(t1.costs.toString());
+        //System.out.println(t1.costs.toString());
         //t1.dfs()
+        /*
         for (int i = 0; i < t1.oras.locations.size(); i++)
         {
             for (int j = 0; j < t1.oras.locations.size(); j++) {
@@ -78,6 +79,8 @@ public class Optional {
             }
             System.out.println();
         }
+
+         */
         System.out.println("Punctul de start este Hotel1");
         int visited[]=new int[t1.oras.locations.size()];
         for(int i=0; i<visited.length; i++)
@@ -93,7 +96,7 @@ public class Optional {
         System.out.println("Afisez planul: ");
         System.out.println(t1.plans);
         System.out.println(t1.getMaximulLocationIndex());
-        t1.getPlan(4);
+        t1.getPlan(6);
     }
 }
 

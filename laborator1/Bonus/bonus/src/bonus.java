@@ -11,16 +11,17 @@ public class bonus {
             }
         }
     }
-    void Afisare_Textuala(int n, int start, int sp)
+    void afisareTextuala(int n, int start, int sp)
     {
             vizitat[start]=1;
+            //daca este frunza
             if(nr_vecini(start, n)==1)
             {   for(int i=0; i< sp ; i++) System.out.print(" ");
                 System.out.println("-node" + start);
                 sp++;
                 for(int i=0; i < n ; i++) {
                     if (matrix[start][i] == 1 && vizitat[i] == 0) {
-                        Afisare_Textuala(n, i, sp);
+                        afisareTextuala(n, i, sp);
                     }
                 }
             }
@@ -30,7 +31,7 @@ public class bonus {
                 sp++;
                 for(int i=0; i < n ; i++){
                     if(matrix[start][i]==1 && vizitat[i]==0) {
-                        Afisare_Textuala(n, i, sp);
+                        afisareTextuala(n, i, sp);
                         //sp++;
                     }
                 }
@@ -66,6 +67,9 @@ public class bonus {
         radacina=(int)(Math.random()*1_000_000 % nr_noduri);
         int k=0;
         int culoare;
+
+        //se pun muchii random pana cand graful este conex
+
         while(conex(nr_noduri)==0)
         {
             for(int i=0; i<nr_noduri; i++)
@@ -92,7 +96,7 @@ public class bonus {
         for(int i=0; i< nr_noduri; i++)
             vizitat[i]=0;
         int sp=1;
-        //Afisare_Textuala(nr_noduri, radacina, sp);
+        afisareTextuala(nr_noduri, radacina, sp);
     }
 
     public static void main(String[] args) {
