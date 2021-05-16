@@ -1,1 +1,5 @@
 
+(*) Pentru a gasi cele mai "conectate" persoane din retea, folosesc o interogare a bazei de date, prin care se returneaza numarul de 
+inregistrari de tip prietenii in care se regaseste utilizatorul curent;
+
+(*) Pentru fiecare utilizator, se face un vector de frecventa pentru a-i detecta pe primii k utilizatori;
