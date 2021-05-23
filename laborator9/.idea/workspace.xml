@@ -1,7 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="49e05fce-7d07-4353-b266-34ec27ba0205" name="Default Changelist" comment="" />
+    <list default="true" id="49e05fce-7d07-4353-b266-34ec27ba0205" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../laborator7/Optional/.idea/dbnavigator.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../laborator7/Optional/Compulsory7/src/Buffer.java" beforeDir="false" afterPath="$PROJECT_DIR$/../laborator7/Optional/Compulsory7/src/Buffer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../laborator7/Optional/Compulsory7/src/Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/../laborator7/Optional/Compulsory7/src/Test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../laborator7/Optional/out/production/Optional/Buffer.class" beforeDir="false" afterPath="$PROJECT_DIR$/../laborator7/Optional/out/production/Optional/Buffer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../laborator7/Optional/out/production/Optional/DaemonThread.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../laborator7/Optional/out/production/Optional/Test.class" beforeDir="false" afterPath="$PROJECT_DIR$/../laborator7/Optional/out/production/Optional/Test.class" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -20,6 +27,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
   </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="49e05fce-7d07-4353-b266-34ec27ba0205" name="Default Changelist" comment="" />

@@ -1,4 +1,6 @@
 import com.opencsv.CSVReader;
+import com.zaxxer.hikari.HikariConfig;
+import com.zaxxer.hikari.HikariDataSource;
 import freemarker.template.TemplateException;
 import org.apache.commons.collections.ArrayStack;
 
@@ -8,13 +10,25 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.sql.*;
 import java.util.*;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 
 public class Compulsory {
     public static void main(String[] args) throws SQLException, IOException, TemplateException {
         String diver="com.sql.jdbc.Driver";
-        Singleton s= Singleton.getInstance();
-        Connection conn= s.conn;
+
+        String config="C:\\Users\\andre\\OneDrive\\Desktop\\Programare-avansata\\laborator8\\Optional\\Compulsory8\\src\\main\\java\\db.properties";
+        HikariConfig cfg= new HikariConfig(config);
+        HikariDataSource dataSource=new HikariDataSource(cfg);
+
+        Connection con = null;
+        PreparedStatement pst = null;
+        ResultSet rs = null;
+
+        try {
+            con = dataSource.getConnection();
+        Connection conn= con;
         HashMap<String, String> search =new HashMap<>();
 
         Statement stm= conn.createStatement();
@@ -98,6 +112,9 @@ public class Compulsory {
                                 System.out.println(result);
                                 search.put("Cautare gen", result.name);
                             }
+        }
+        } catch (SQLException ex) {
+            System.out.println(ex);
         }
 
     }

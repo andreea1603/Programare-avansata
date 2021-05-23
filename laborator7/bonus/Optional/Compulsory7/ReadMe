@@ -1,0 +1,14 @@
+(*) Pentru a calcula castigatorul, se inmulteste numarul de elemente ale circuitului format cu numarul de
+piese de pe tabla; 
+
+(*) Pentru o alegere manuala, jucatorul va citi de la tastatura, iar pentru cea automata, se va alege un 
+numar la intamplare
+
+(*) Fiecare jucator are o variabila turn, in care se retine randul sau, al catalea va extrage tokenul
+
+(*) In clasa Buffer se seteaza numarul maxim de jucatori, si exista metoda put, prin care un jucator incearca
+sa extraga un token de pe masa, iar in clasa Player, prin metoda run, se asigura ca fiecare jucator extrage un 
+token pe rand.
+
+(*) Tokenii primiti de fiecare jucator sunt retinuti intr-un map de tip <Pair, Integer>, unde se retine perechea
+de numere ale tokenului (ex. (2,4), (6,4) etc..) si randul jucatorului (id, unic pentru fiecare jucator)
