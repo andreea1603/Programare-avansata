@@ -1,1 +1,6 @@
+(*) smart player: playerul va incerca mai intai sa ia o piesa de pe tabla care i-ar putea folosi; daca nu gaseste una, atunci
+va incerca sa ii blocheze pe ceilalti jucatori; daca niciuna din mutari nu este posibila, atunci va alege
+o piesa intamplator;
 
+(*) strategii de calculare a scorului: numarul de piese maxim dintr-un circuit se inmulteste cu numarul punctelor obitnute sau
+numarul tuturor pieselor se va inmulti cu punctajul final al tuturor pieselor;
